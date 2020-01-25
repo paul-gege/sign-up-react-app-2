@@ -1,0 +1,267 @@
+/* Normalizing our browser */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+/* for our floating objects to have parents that wrap */
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+/* making our padding not increase the size of our element */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body, html {
+	padding: 1px;
+	font-family: 'Raleway', 'sans-serif';
+}
+
+.wrapper {
+	padding: 1px;
+	width: 100%;
+	margin: 0;
+	padding: 5%;
+	display: flex;
+	background-image: url(./assets/design-tools-bgnd.jpg);
+	height: 100%;
+	justify-content: space-between;
+}
+
+/* ---- handling the first form (login) -------- */
+div.left {
+	width: 30%;
+	height: 60vh;
+	min-height: 450px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #d0ee3b;
+	z-index: 10;
+	position: relative;
+	left: 7%;
+	top: 70px;
+	flex-grow: 1;
+}
+
+/* ----- make sure all form elements are aligned vertically ------- */
+.left form.form-login {
+	flex-basis: 40%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.left div.header-icon, .left div.header-login, .left div.form-description {
+	flex-shrink: 1;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin: 0;
+}
+.left div.form-description p {
+	font-size: 100%;
+	display: inline-block;
+	text-align: center;
+	width: 50%;
+}
+
+.left div.header-icon img{
+	width: 12%;
+}
+
+.left div.header-login h2{
+	font-weight: normal;
+	margin: 15px 0;
+	color: #49416d;
+	font-size: 200%;
+}
+
+.left .form-description {
+	display: flex;
+	justify-content: center;
+	color: #49416d;
+}
+
+.left label {
+	display: none;
+}
+
+.left input {
+	color: #2c6b2b;
+	border: 0;
+	padding: 6px 0;
+	border-bottom: 1px solid #2c6b2b;
+	width: 65%;
+	background-color: #d0ee3b;
+}
+
+.left .login-btn {
+	color: white;
+	background-color: #54ea45;
+	width: 25%;
+	height: 50px;
+	border: 0;
+	padding: 25px auto;
+	border-bottom-left-radius: 20%60%;
+	border-top-left-radius: 20%60%;
+	border-bottom-right-radius: 20%60%;
+	border-top-right-radius: 20%60%;
+	font-weight: bold;
+}
+
+
+/*--- dealing with the right side of the form ------*/
+div.right {
+	min-height: 650px;
+	width: 40%;			
+	height: 77vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #4c4572;
+	position: relative;
+	right: 7%;
+	flex-grow: 2;
+}
+
+.right .signup-header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.right .signup-header h2 {
+	color: #9183f1;
+	font-weight: normal;
+	font-size: 200%;
+}
+
+.right .form-description {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.right .form-description p {
+	font-size: 100%;
+	color: #9183f1;
+	width: 35%;
+	text-align: center;
+	margin: 0;
+	margin-bottom: 45px;
+}
+
+.right .signup-form {
+	width: 100%;
+	height: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 15px;
+}
+
+.right .signup-form .dob, .occupation, .sin, .income-tn  {
+	display: flex;
+	width: 50%;
+}
+
+.right .signup-form .side-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+.side-icons img {
+	width: 65%;
+}
+
+.right .signup-form .input-wrap {
+	font-weight: bold;
+	color: #9183f1;
+	display: flex;
+	flex-direction: column;
+	flex: 3;
+}
+
+.right .signup-form .login-input {
+	color: #e2d1ff;
+	border: 0;
+	border-bottom: 1px solid #e2d1ff;
+	padding: 10px 0;
+	background: transparent;
+	background-size: cover;  
+}
+
+.next-btn {
+	color: white;
+	background-color: #d0ee3b;
+	width: 25%;
+	height: 50px;
+	border: 0;
+	padding: 25px auto;
+	border-bottom-left-radius: 20%60%;
+	border-top-left-radius: 20%60%;
+	border-bottom-right-radius: 20%60%;
+	border-top-right-radius: 20%60%;
+	font-weight: bold;
+}
+
+@media (max-width: 1280px) {
+
+	.wrapper {
+		padding: 3%;
+	}
+
+	div.right {
+		width: 40%;			
+		height: 90vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #4c4572;
+		position: relative;
+		right: 7%;
+		flex-grow: 2;
+	}
+
+	div.left {
+		width: 30%;
+		height: 70vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #d0ee3b;
+		z-index: 10;
+		position: relative;
+		left: 7%;
+		top: 70px;
+		flex-grow: 1;
+	}
+}
+
+@media (max-width: 900px){
+	.wrapper {
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 0;
+		background-image: none;
+	}
+
+	div.left {
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	div.right {
+		height: 120vh;
+		width: 100%;
+		top: 0;
+		right: 0;
+	}
+}
